@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>M[Cloto.DbView]</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="resources/css/base.css">
+		<script src="https://localhost/Teminal/v002.0/terminal_v2.0.class.js" charset="utf-8"></script>
+		<script src="resources/js/page.js" charset="utf-8"></script>
+		<script src="resources/js/newNota.js" charset="utf-8"></script>
+		<script src="resources/js/edit.js" charset="utf-8"></script>
+		<script src="resources/js/search.js" charset="utf-8"></script>
+		<script src="resources/js/user.js" charset="utf-8"></script>
+	</head>
+	<body onload="page.loaded()">
+		<section id="content" ></section>
+		<header>
+			<h1>
+				<img id="header-logo" src="resources/img/logo3.svg">
+				M[Cloto.DbView]
+			</h1>
+			<nav> 
+				<input type="text" onkeyup="page.iSearch()" id="searchInput" placeholder="Pesquisa">
+				<a onclick="page.setQuery('');">X</a>
+			</nav>
+		</header>
+		<user>
+			<img onclick="user.perfil()" src="resources/img/perfil.svg" alt="Perfil">
+		<user>
+		<nav class="submenu" >
+			<a onclick="page.novaNota()">Adicionar</a>
+			<a onclick="page.setQuery('');">Clear</a>
+			<a onclick="page.search()">Update</a>
+			<span id="aSearch"  ></span>
+		</nav>
+		<footer>
+			<a href="#">Terminal</a>
+		</footer>
+		<div id="popUp" class="popUP-false">
+			<div id="popUp-base" onclick="page.popUp()"></div>
+			<div id="popUp-content" >
+			</div>
+		</div>
+	</body>
+	
+</html>

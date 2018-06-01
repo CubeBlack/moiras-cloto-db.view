@@ -1,0 +1,158 @@
+*{
+	margin:0;
+	padding:0;
+}
+a:hover{
+	color:red;
+	cursor:pointer;
+}
+body{
+	margin-top:100px;
+	background-image:url("../img/background.svg");
+}
+#content{
+	margin-top:25px;
+	margin-bottom:50px;
+	display:table;
+}
+header{
+	background-color:white;
+	top:0;
+	left:0;
+	width:100%;
+	position:fixed;
+	border-bottom:1px solid black;
+}
+header h1{
+	font-size:0px;
+	display:inline;
+	padding-right:20px;
+}
+#header-logo{
+	height:35px;
+}
+nav{
+	display:inline-block;
+	margin:4px;
+	padding:4px;
+}
+user{
+	position:fixed;
+	right:3px;
+	top:3px;
+	height:70px;
+}
+user img{
+	height:calc(100% - 12px);
+	border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+user img:hover{
+	background-color:red;
+}
+dado{
+	position:relative;
+	background-color:white;
+	display:block;
+	min-height:80px;
+	min-width:80px;
+	padding:1px;
+	margin:2px;
+	float:left;
+	border:1px solid black;
+	overflow:hidden;
+}
+dado valor{
+	display:block;
+	border-bottom: 1px solid black;
+	min-height:50px;
+	white-space:pre-wrap;
+}
+dado tag{
+	color:blue;
+}
+dado editar{
+	display: block;
+	/*white-space:*/
+}
+dado img{
+	height:100px;
+}
+.submenu{
+	position:fixed;
+	right:0;
+	padding:3px;
+	bottom:50px;
+	color:white;
+	border-radius:5px;
+	background:black;
+}
+.submenu a:hover{
+	color:red;
+	cursor:pointer;
+}
+footer{
+	background-color:white;
+	position:fixed;
+	bottom:0;
+	width:100%;
+	display:block;
+	width:100%;
+	border-top:1px solid black;
+	float:right;
+}
+.popUP-true{
+	display:block;
+	
+}
+.popUP-false{
+	display:none;
+	
+}
+#popUp{
+	position:fixed;
+	top:0;
+	right:0;
+	width:100%;
+	height:100%;
+	background-color:rgba(255,255,255,0.5);	
+}
+#popUP-base{
+	width:100%;
+	height:100%;
+	background-color:rgba(255,255,255,0.5);	
+}
+.popUP-base-true{
+	display:block;
+	background-color:rgba(255,255,255,0.5);	
+}
+#popUp-content{
+	position:fixed;
+	border: 1px solid black;
+	width:500px;
+	right:calc(50% - 250px);
+	top:top(50% - 250px);
+	background-color:white;
+	height:500px;
+	padding:10px;
+	margin:10px;
+}
+#fNotaCabecario{
+	text-align:center;
+	font-size:30;
+}
+#fNotaDado{
+	width:100%;
+	height:350px;
+}
+#fNotaTag{
+	width:100%;
+}
+#fNotaAplic{
+	padding: 3px;
+	padding-left:10px;
+	padding-right:10px;
+	margin: 3px;
+	text-align:center;
+}
