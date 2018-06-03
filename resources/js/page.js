@@ -7,11 +7,11 @@ page.loaded = function(){
 	term = new Terminal();
 	sTerm = new Terminal();
 	
-	term.server = "https://localhost/Cloto/server/server-terminal.php";
-	term.workerUrl = "https://localhost/Teminal/v002.0/terminal_v1.1worker.js";
+	term.server = "http://limapage.esy.es/servers/cloto/server-terminal.php";
+	term.workerUrl = "https://cubeblack.github.io/Teminal/v002.1/terminal_v1.1worker.js";
 	
-	sTerm.server = "https://localhost/Cloto/server/server-terminal.php";
-	sTerm.workerUrl = "https://localhost/Teminal/v002.0/terminal_v1.1worker.js";
+	sTerm.server = "http://limapage.esy.es/servers/cloto/server-terminal.php";
+	sTerm.workerUrl = "https://cubeblack.github.io/Teminal/v002.1/terminal_v1.1worker.js";
 	
 	sTerm.on();
 	term.on();
