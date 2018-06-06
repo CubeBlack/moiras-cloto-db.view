@@ -36,11 +36,10 @@ page.rSearch = function(msg){
 				resposta += dados[indice].id;
 			resposta += "</id>";
 			resposta += " - ";
-			resposta += "<user>";
+			resposta += "<dado-user>";
 				resposta += dados[indice].user.nick;
-			resposta += "</user>";
+			resposta += "</dado-user>";
 			resposta += "<valor>";
-				
 				resposta += dados[indice].dado;
 			resposta += "</valor>";
 			resposta += "<tag>";
@@ -60,7 +59,6 @@ page.rSearch = function(msg){
 	document.getElementById("content").innerHTML = resposta;
 	console.log(dados);
 	page.respostaOld = msg;
-	
 }
 page.SearchCount = function(){
 	++page.searchN;

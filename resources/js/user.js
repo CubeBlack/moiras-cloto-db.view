@@ -14,6 +14,7 @@ user.get = function(){
 		user.id = tUser.id;
 		user.nick = tUser.nick;
 		user.poder = tUser.posder;
+		user.email = tUser.email;
 		user.titulo	 = tUser.titulo;
 		
 		if(user.id == "0" ){
@@ -37,7 +38,15 @@ user.get = function(){
 user.perfil = function(){
 	if(user.logued){
 		page.popUp();
-		page.popContent(user.tPerfil);
+		var perfilDados = {
+		"titulo":user.titulo,
+		"id":user.id,
+		"poder":user.poder,
+		"email":user.email,
+		"nick":user.nick
+		};
+		perfil = page.replace(user.tPerfil,perfilDados);
+		page.popContent(perfil);
 		return;
 	}
 	user.formLogin();
@@ -69,8 +78,14 @@ user.logar = function(){
 	term.com(com,retorno);
 	console.log(com);
 }
-user.tPerfil = "<h1>{titulo} {nick}</h1><input type='button' value='Sair' onclick='page.popUp()'><input type='button' value='Cancelar' onclick='page.popUp()'>";
-user.tFormLogin = "<h1>Usuario Cloto</h1><label id='FormLogin-retorno'></label><form><label>nick/e-mail</label><input id='FormLogin-user'><label>senha</label><input id='FormLogin-pass'><input type='button' value='Logar' onclick='user.logar();'><input type='button' value='Cancelar' onclick='page.popUp()'></form>";
-
+user.sair = function(){
+	retorno = function(msg){
+		user.get();
+		page.search();
+	}
+	term.com("user.sair()",retorno);
+}
+user.tPerfil = "<h1>{titulo} {nick}</h1><p><label>ID</label>: {id}</p><p><label>e-mail</label>: {email}</p><p><label>poder</label>: {poder}</p><input type='button' value='Sair' onclick='page.popUp();user.sair();'><input type='button' value='Cancelar' onclick='page.popUp()'>";
+user.tFormLogin = "<h1>Usuario Cloto</h1><label id='FormLogin-retorno'></label><form><label>nick/e-mail</label><input id='FormLogin-user'><label>senha</label><input id='FormLogin-pass' type='password'><input type='button' value='Logar' onclick='user.logar();'><input type='button' value='Cancelar' onclick='page.popUp()'></form>";
 
 console.log("user.js");
